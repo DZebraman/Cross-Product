@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>X</title>
+    <meta name="description" content="Cross Product">
+    <meta name="author" content="Zebraman">
+
+    <link rel="stylesheet" href="css/cssReset.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/textDisplay.css">
+
+    <script type="text/javascript" src="angular-source/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular/main.js"></script>
+</head>
+
+<body ng-app="MAIN">
+    <div ng-controller="MAIN_CONTROLLER as mainCtrl">
+        <div class="displayContainer">
+            <div class="textDisplay" id="textConsole">
+                <p class="individualText" ng-repeat="out in mainCtrl.output track by $index">{{out}}</p>
+                {{mainCtrl.autoScroll()}}
+            </div>
+            <form autocomplete="off" ng-submit="mainCtrl.postOutput(consoleInput)">
+                <input id="textInput" class="fullWidth" type="=text" ng-model="consoleInput">{{consoleInput}}</input>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

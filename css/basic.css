@@ -1,0 +1,16 @@
+body{
+    background-color: #010101;
+    background: linear-gradient( #080808,#010101);
+}
+html{
+    min-height: 100%;
+}
+.fullWidth{
+    width:100%;
+}
+.fullHeight{
+    height:100;
+}
+.floatLeft{
+    float:left;
+}

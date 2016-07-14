@@ -1,0 +1,42 @@
+.textDisplay{
+    color: #4F1;
+    padding: 2.5%;
+    max-height: 40vh;
+    overflow: hidden;
+}
+.displayContainer{
+    font-family: Courier New, Courier, monospace;
+    margin: auto;
+    margin-top: 2.5%;
+    width:50%;
+    height: 50%;
+    max-height: 900px;
+    margin-bottom: 5%;
+
+    padding: 2.5%;
+}
+.important{
+    font-weight: bold;
+    color: #F00;
+}
+.hiddenLink{
+    text-decoration: none;
+}
+.individualText{
+    margin:0.25%;
+}
+#textInput{
+    padding:5%;
+    margin-top: auto;
+    background-color: #111;
+    border-style:none;
+    color: #EEE;
+    font-family: Courier New, Courier, monospace;
+    font-weight: bolder;
+    font-size: 1.25em;
+    padding: 0.25em;
+    overflow:hidden;
+}
+#textInput:focus{
+    outline:none;
+}
