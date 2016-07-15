@@ -26,7 +26,7 @@
                         <tr ng-repeat="out in mainCtrl.output track by $index">
 
                             <td class="line ">
-                                <div class="lineNumber">{{$index}}: </div>
+                                <div class="lineNumber">{{(mainCtrl.count - (mainCtrl.output.length - $index))+1}}: </div>
                             </td>
                             <td class="line ">
                                 <div class="individualText responseText">{{out.input}}</div>

@@ -1,6 +1,7 @@
 var MAIN_MODULE = angular.module('MAIN', []);
 MAIN_MODULE.controller('MAIN_CONTROLLER', ['$scope',function($scope){
-    this.MAX_SIZE = 50;
+    this.MAX_SIZE = 6;
+    this.count = 0;
     this.output = [
         {input:"test",output:"test response"},
     ];
@@ -8,6 +9,7 @@ MAIN_MODULE.controller('MAIN_CONTROLLER', ['$scope',function($scope){
 
     this.postOutput = function(s_input){
         //process input;
+        this.count++;
         this.output.push({input:s_input,output:this.randomText()});//(0,0,s_input);
         if(this.output.length > this.MAX_SIZE){
             this.output.splice(0,1);
