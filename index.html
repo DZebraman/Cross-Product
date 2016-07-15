@@ -21,11 +21,43 @@
     <div ng-controller="MAIN_CONTROLLER as mainCtrl">
         <div class="displayContainer">
             <div class="textDisplay" id="textConsole">
-                <p class="individualText" ng-repeat="out in mainCtrl.output track by $index">{{out}}</p>
+                <table>
+                    <tbody>
+                        <tr ng-repeat="out in mainCtrl.output track by $index">
+
+                            <td class="line ">
+                                <div class="lineNumber">{{$index}}: </div>
+                            </td>
+                            <td class="line ">
+                                <div class="individualText responseText">{{out.input}}</div>
+                            </td>
+                             <td class="line ">
+                                <div class="lineNumber">: </div>
+                            </td>
+                            <td class="line fullWidth">
+                                <div class="individualText">{{out.output}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--
+                <div ng-repeat="out in mainCtrl.output track by $index">
+                    <div class="line fullWidth test">
+                        <div class="adjacent lineNumber">{{($index*2)}}: </div>
+                        <div class="adjacent individualText responseText">{{out.input}}</div>
+                    </div>
+                    <div class="line altLineColor fullWidth">
+                        <div class="adjacent lineNumber">{{(($index*2)+1)}}: </div>
+                        <div class="adjacent individualText">{{out.output}}</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                -->
                 {{mainCtrl.autoScroll()}}
             </div>
             <form autocomplete="off" ng-submit="mainCtrl.postOutput(consoleInput)">
-                <input id="textInput" class="fullWidth" type="=text" ng-model="consoleInput">{{consoleInput}}</input>
+                <input id="textInput" placeholder="\>" ng-keydown="$event.which === 38 && mainCtrl.upArrow()" class="fullWidth" type="=text"
+                    ng-model="consoleInput"></input>
             </form>
         </div>
     </div>

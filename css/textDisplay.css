@@ -1,23 +1,39 @@
 .textDisplay{
-    color: #4F1;
+    color: #9BFF00;
     padding: 2.5%;
     max-height: 40vh;
     overflow: hidden;
+    text-shadow: 0 0 2px #528700;
 }
 .displayContainer{
-    font-family: Courier New, Courier, monospace;
+    font-family: monospace;
+    font-size:  1.25em;
     margin: auto;
     margin-top: 2.5%;
     width:50%;
     height: 50%;
     max-height: 900px;
     margin-bottom: 5%;
-
     padding: 2.5%;
+
+    border-style: solid;
+    border-color: #333;
+    border-width: 0.125em;
+    border-radius: 4px;
+
 }
 .important{
     font-weight: bold;
     color: #F00;
+}
+.responseText{
+    font-weight:bold;
+    color: #EEE;
+    text-shadow: 0 0 1px #999;
+    width: 200px;
+    max-width: 200px;
+    overflow:hidden;
+    text-overflow: ellipsis;
 }
 .hiddenLink{
     text-decoration: none;
@@ -28,15 +44,41 @@
 #textInput{
     padding:5%;
     margin-top: auto;
-    background-color: #111;
+    background-color: rgba(0,0,0,0);
     border-style:none;
     color: #EEE;
-    font-family: Courier New, Courier, monospace;
+    font-family: monospace;
     font-weight: bolder;
     font-size: 1.25em;
     padding: 0.25em;
     overflow:hidden;
+
+    border-bottom: solid;
+    border-color: #EEE;
+    border-width: 0.06em;
 }
 #textInput:focus{
     outline:none;
+}
+.lineNumber{
+    color:#333;
+    text-shadow: 0 0 1px #222;
+    height: 100%;
+}
+.altLineColor{
+    background-color: #111;
+}
+.line{
+    border-bottom: solid;
+    border-color: #222;
+    border-width: 0.125em;
+    padding-bottom:5px;
+    padding-top:5px;
+    padding-left:1em;
+}
+.adjacent{
+    display: inline-block;
+}
+.clear{
+    clear:left;
 }
